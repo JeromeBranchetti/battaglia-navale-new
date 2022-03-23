@@ -1,0 +1,114 @@
+.sea {
+  background-image: url(https://img.freepik.com/premium-vector/summer-seashore-with-sand-top-view-wave-rolls-onto-sand-sea-foam-blue-water-cartoon-illustration_104571-82.jpg?size=338&ext=jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 30px;
+}
+
+.sea-space {
+  height: 800px;
+  width: 800px;
+  position: relative;
+}
+
+.grid {
+  position: absolute;
+  left: 30%;
+  top: 5%;
+  border: 2px solid black;
+  height: 66%;
+  width: 66%;
+  padding: 0;
+}
+
+.columns-grid {
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  border-right: 1px solid blue;
+}
+
+.life-box {
+  border: 1px solid rebeccapurple;
+  padding: 3px;
+  text-align: center;
+}
+
+.inside-box {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-auto-flow: column;
+  column-gap: 0;
+  margin-bottom: 50px;
+  width: 500px;
+  position: relative;
+}
+
+.col-wrapper {
+  border: 1px solid blue;
+  width: 501px;
+  height: 502px;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-image: url(https://img.freepik.com/premium-vector/summer-seashore-with-sand-top-view-wave-rolls-onto-sand-sea-foam-blue-water-cartoon-illustration_104571-82.jpg?size=338&ext=jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.fire-me {
+  width: 100%;
+}
+
+.letters-on-grid {
+  width: 501px;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 102%;
+
+}
+
+.numbers-on-grid {
+  height: 502px;
+  justify-content: space-around;
+  position: absolute;
+  align-content: center;
+  right: 103%;
+
+}
+
+.numb {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.container {
+  position: relative;
+  height: 80vh;
+}
+
+.sea-grid {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  
+
+}
+
+.number-column {
+  display: flex;
+  flex-direction: column;
+}
+
+fa-icon {
+  font-size: 20px;
+  margin-left: 5px;
+}

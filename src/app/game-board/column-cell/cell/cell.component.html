@@ -1,0 +1,17 @@
+<div
+  class="cell p-0 m-0"
+  (click)="tellMeAboutYou()"
+  [ngStyle]="{
+    'background-color': seaOrShip === 'sea' ? 'transparent' : 'grey'
+  }"
+  [style.pointer-events]="styleFunction(clickable)"
+>
+  <div
+    class="row cover"
+    [ngStyle]="{
+      'background-color': uncover === true ? 'transparent' : 'white'
+    }"
+  >
+    <span *ngIf="uncover === true">&cross;</span>
+  </div>
+</div>

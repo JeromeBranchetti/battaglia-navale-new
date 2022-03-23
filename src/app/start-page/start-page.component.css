@@ -1,0 +1,19 @@
+.settings {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.507);
+  font-size: larger;
+}
+
+.container {
+  background-image: url(https://www.giochi-da-tavolo.it/wp-content/uploads/2017/08/battaglia-navale-gdt.jpg);
+  background-size: contain;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: aliceblue;
+}

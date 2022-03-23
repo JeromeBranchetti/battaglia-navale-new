@@ -1,0 +1,23 @@
+.game-over-page {
+  position: relative;
+  background-image: url(https://rewriters.it/wp-content/uploads/2020/06/41aa980f-75a9-404e-a600-9335173d040d.jpg);
+  background-size: cover;
+  height: 80vh;
+  width: 80vw;
+}
+
+.victory-page {
+  background-image: url(https://www.nmrn.org.uk/sites/default/files/hms_victory_banner_1000x417px.jpg);
+  background-size: cover;
+  height: 80vh;
+  width: 80vw;
+}
+
+.victory-banner {
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  color: antiquewhite;
+}

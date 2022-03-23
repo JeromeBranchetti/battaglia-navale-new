@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- Start component -->
+  <div *ngIf="pagina === 'uno'">
+    <app-start-page
+      (startFired)="staretedSignal($event)"
+      (inputClickOrKey)="clickOrKeyActivated($event)"
+    ></app-start-page>
+  </div>
+  <!-- Game board component -->
+  <div *ngIf="pagina === 'due'">
+    <app-game-board
+      (resetFired)="resetedSignal($event)"
+      (gameOverFired)="gameOverReceived($event)"
+      [fireState]="howToFireInput"
+      (victoryFired)="youWin($event)"
+    ></app-game-board>
+  </div>
+  <!-- Game over page -->
+  <div class="game-over-page" *ngIf="pagina === 'tre'"></div>
+  <!-- Victory page -->
+  <div class="victory-page" *ngIf="pagina === 'quattro'">
+    <span class="victory-banner">You WIN !!!</span>
+  </div>
+</div>
