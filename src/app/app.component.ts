@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  pagina: string = 'uno';
+  pagina: string = 'due';
   faHeart = faHeart;
   howToFireInput: string = 'keyboard';
 

@@ -12,6 +12,7 @@ export class CellComponent implements OnInit {
   uncover: boolean = false;
   myName!: any[];
   clickable: boolean = true;
+  @Input() toggleVisibleInput: boolean = false;
 
   @Input() inputNumber!: number;
   @Input() inputLetter!: string;
@@ -56,4 +57,6 @@ export class CellComponent implements OnInit {
       return 'none';
     }
   }
+
+  
 }

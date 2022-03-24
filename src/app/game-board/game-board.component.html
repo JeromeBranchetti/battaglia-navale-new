@@ -12,38 +12,22 @@
             <div class="col-2 px-0">
               <!-- Letter Column -->
               <div class="row letter-column d-flex flex-column">
-                <div
-                  class="col"
-                  *ngFor="let letter of arrayLetters; index as j"
-                >
-                  <app-fire-button
-                    [value]="arrayLetters[j]"
-                    (targetKeyboardFire)="updateTarget($event)"
-                  ></app-fire-button>
+                <div class="col" *ngFor="let letter of arrayLetters; index as j">
+                  <app-fire-button [value]="arrayLetters[j]" (targetKeyboardFire)="updateTarget($event)">
+                  </app-fire-button>
                 </div>
               </div>
             </div>
             <div class="col-2 px-0">
               <!-- Number Column -->
               <div class="row number-column">
-                <div
-                  class="col"
-                  *ngFor="let letter of arrayLetters; index as j"
-                >
-                  <app-fire-button
-                    [value]="j + 1"
-                    (targetKeyboardFire)="updateTarget($event)"
-                  ></app-fire-button>
+                <div class="col" *ngFor="let letter of arrayLetters; index as j">
+                  <app-fire-button [value]="j + 1" (targetKeyboardFire)="updateTarget($event)"></app-fire-button>
                 </div>
               </div>
             </div>
             <div class="col-4">
-              <button
-                type="button"
-                class="btn btn-danger"
-                [disabled]="!readyToFire"
-                (click)="fireHasBeenSent()"
-              >
+              <button type="button" class="btn btn-danger" [disabled]="!readyToFire" (click)="fireHasBeenSent()">
                 Fire
               </button>
               <span class="mx-1">{{ possibleCoordinates[0] }}</span>
@@ -53,11 +37,7 @@
         </div>
         <!-- Generate the grid with cell components -->
         <div class="col-3">
-          <button
-            class="btn btn-success"
-            (click)="boardGenerator()"
-            [disabled]="!canGenerateBoard"
-          >
+          <button class="btn btn-success" (click)="boardGenerator()" [disabled]="!canGenerateBoard">
             Start Game
           </button>
         </div>
@@ -68,13 +48,11 @@
       <!-- Life info -->
       <div class="row heart-row">
         <h4>Life bar</h4>
+        <button type="button" class="btn btn-outline-success" (click)=" toggleVisibleChanger()">Easy Mode</button>
         <div class="life-box">{{ lifeRemaining }}</div>
         <div class="col-10 heart-wrapper">
-          <fa-icon
-            [icon]="faHeart"
-            *ngFor="let heart of lifeRemainingArray; index as i"
-            [ngStyle]="{ color: heart === 'on' ? 'red' : 'black' }"
-          ></fa-icon>
+          <fa-icon [icon]="faHeart" *ngFor="let heart of lifeRemainingArray; index as i"
+            [ngStyle]="{ color: heart === 'on' ? 'red' : 'black' }"></fa-icon>
         </div>
       </div>
     </div>
@@ -112,15 +90,9 @@
       </div>
 
       <div class="wrapper">
-        <app-cell
-          #cellRef
-          [inputLetter]="cell.letter"
-          [inputNumber]="cell.number"
-          [inputSeaOrShip]="cell.seaOrShip"
-          (reduceLifeFired)="changeLife($event)"
-          (myCoordinates)="thisHasBeenHit($event)"
-          *ngFor="let cell of listBoardRand"
-        ></app-cell>
+        <app-cell #cellRef [toggleVisibleInput]="toggleVisible" [inputLetter]="cell.letter" [inputNumber]="cell.number"
+          [inputSeaOrShip]="cell.seaOrShip" (reduceLifeFired)="changeLife($event)"
+          (myCoordinates)="thisHasBeenHit($event)" *ngFor="let cell of listBoardRand"></app-cell>
       </div>
     </div>
   </div>

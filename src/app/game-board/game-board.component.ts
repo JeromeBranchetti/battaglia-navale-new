@@ -24,6 +24,7 @@ export class GameBoardComponent implements OnInit, AfterViewInit {
   arrayLetters: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
   arrayGridColumns: ColumnCellComponent[] = [];
   lifeRemaining: number = 10;
+  toggleVisible: boolean = false;
   lifeRemainingArray: string[] = [
     'on',
     'on',
@@ -380,6 +381,11 @@ export class GameBoardComponent implements OnInit, AfterViewInit {
         );
       })
       ?.tellMeAboutYou();
+  }
+
+  toggleVisibleChanger() {
+    this.toggleVisible = !this.toggleVisible;
+    console.log(this.toggleVisible);
   }
 
  
